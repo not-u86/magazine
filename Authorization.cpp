@@ -66,33 +66,37 @@ void MainMenu()
 		system("cls");
 
 		std::wcout << L"\n\t\t\t\tSellDrink\n\n";
-		std::wcout << L"\t\t\t\tГлавное меню\n\n";
+	
 
-		std::wcout << L"\t\t\t\t1. Просмотр товаров\n";
+		std::wcout << L"\t\t\t\t1. товары\n";
 		std::wcout << L"\t\t\t\t2. Пополнение склада\n";
-		std::wcout << L"\t\t\t\t3. Добавить новый товар\n";
+		std::wcout << L"\t\t\t\t3. Добавить товар\n";
 		std::wcout << L"\t\t\t\t4. Выход\n\n";
 
 		std::wcout << L"\t\t\t\tВыберите действие: ";
 		GetLine(choose);
 
-		if (choose == L"1")
+		if (choose == L"1" && sizeSt > 0)
 		{
 			ShowStorage(0);
 		}
-		else if (choose == L"2")
+		else if (choose == L"2" && sizeSt > 0)
 		{
 			AddProduct();
 		}
-		else if (choose == L"3")
+		else if (choose == L"3" && sizeSt > 0)
 		{
 			AddNewProduct();
 		}
-		else if (choose == L"4")
+		else if (choose == L"4" && sizeSt > 0)
 		{
-			return;
+			RemoveProduct();
 		}
-		else
+		else if (choose == L"5" && sizeSt > 0)
+		{
+			ChangePrice();
+		}
+		else if (choose == L"6")
 		{
 			std::wcout << L"\nНеверный выбор!\n";
 			Sleep(1000);

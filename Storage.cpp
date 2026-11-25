@@ -223,3 +223,7 @@ void AddNewProduct()
 	std::wcout << L"\nТовар успешно добавлен!\n";
 	Sleep(1500);
 }
+void RemoveProduct()
+{
+	std::wstring
+}

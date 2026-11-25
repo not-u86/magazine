@@ -15,6 +15,10 @@ int main()
 	
 
 	Start();
+
+	CreateSet();
+
+	std::wstring asd[5](L"12345", L"asdqwef5", L"glfg4")
 	
 
 	return 0;

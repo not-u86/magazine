@@ -5,6 +5,7 @@
 #include <iostream>
 #include <Windows.h>
 #include <string>
+#include <unordered_set>
 
 void GetLine(std::wstring& str);
 bool IsNumber(const std::wstring& str);
